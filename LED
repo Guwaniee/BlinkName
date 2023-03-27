@@ -1,0 +1,109 @@
+// -----Blink an LED---- //
+
+int led1 = D7; 
+int buttonPin = D5;
+bool buttonState = LOW; // variable to store the state of the push button
+
+void setup()
+{
+  pinMode(led1, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP); // enable internal pull-up resistor for the push button
+}
+
+void loop()  // loop for blinking "GUWANI" in argon particle
+{
+  buttonState = digitalRead(buttonPin); // read the state of the push button
+  if (buttonState == HIGH) { // if the push button is pressed
+    digitalWrite(led1, LOW); // turn off the LED
+    delay(1000); // wait for 1 second
+    return; // restart the loop
+  }
+  
+  
+    //Blinking GUWANI-
+  //Morse code for "G"
+    
+  digitalWrite(led1, HIGH);	   
+  delay(2500);				
+  digitalWrite(led1, LOW);	  
+  delay(1000);
+  digitalWrite(led1, HIGH);
+  delay(2500);
+  digitalWrite(led1, LOW);
+  delay(1000); 
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+    
+  //Morse Code for U'
+    
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000); 
+  digitalWrite(led1, HIGH);
+  delay(2500);
+  digitalWrite(led1, LOW);
+  delay(1000); 
+
+  //Morse Code for W'
+    
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+  digitalWrite(led1, HIGH);
+  delay(2500);
+  digitalWrite(led1, LOW);
+  delay(1000); 
+  digitalWrite(led1, HIGH);
+  delay(2500);
+  digitalWrite(led1, LOW);
+  delay(1000); 
+
+  //Morse code for "A"
+    
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+  digitalWrite(led1, HIGH);	   
+  delay(1000);				
+  digitalWrite(led1, LOW);	  
+  delay(1000);
+
+  //Morse Code for N'
+    
+  digitalWrite(led1, HIGH);
+  delay(2500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+
+  //Morse code for "I"
+    
+  digitalWrite(led1, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  delay(1000);
+  digitalWrite(led1, HIGH);	   
+  delay(500);				
+  digitalWrite(led1, LOW);	  
+  delay(1000);
+    
+    
+  //END
+    
+  digitalWrite(led1,LOW);
+  delay(5000);
+    
+  // And repeat!
+}
